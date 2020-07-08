@@ -8,7 +8,7 @@ const twitter = new Twitter({
 
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
 let day = 1;
