@@ -31,3 +31,8 @@ app.listen(PORT, () => {
 
     console.log(`App listening on port ${PORT}`)
 });
+
+twitter.post('statuses/update', {status: `Test send tweet`},  function(error, tweet, response) {
+    if(error) throw error;
+    console.log("I sent the tweet", tweet);  // Raw response object.
+})
